@@ -17,9 +17,21 @@ public class Main {
         klass.assignLeader(student);
         System.out.println(student.introduce());
 
-        Class[] classes = {new Class(2), new Class(3)};
+        Class[] classes = {klass, new Class(3)};
         Teacher teacher = new Teacher(1, "Tom", 21, classes);
         System.out.println(teacher.introduce());
+
+        Teacher anotherTeacher = new Teacher(1, "Mary", 22, new Class[0]);
+        System.out.println(anotherTeacher.introduce());
+
+        Class anotherClass = new Class(3);
+        anotherClass.assignLeader(student);
+
+        teacher.setTeacherForClasses();
+        klass.assignLeader(student);
+
+        Student anotherStudent = new Student(2, "Jerry", 21, anotherClass);
+        klass.appendMember(anotherStudent);
 
     }
 }

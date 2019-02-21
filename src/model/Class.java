@@ -29,7 +29,7 @@ public class Class {
         } else {
             this.leader = leader;
             if (this.teacher != null) {
-                System.out.println("I am " + this.teacher.name + ".I know " + leader.name + " has become the Leader of Class " + this.number + ".");
+                System.out.println("I am " + this.teacher.name + ". I know " + leader.name + " has become the Leader of Class " + this.number + ".");
             }
         }
     }
@@ -37,7 +37,7 @@ public class Class {
     public void appendMember(Student student) {
         student.setKlass(this);
         if (this.teacher != null) {
-            System.out.println("I am " + this.teacher.name + ".I know " + student.name + " has joined Class " + this.number + ".");
+            System.out.println("I am " + this.teacher.name + ". I know " + student.name + " has joined Class " + this.number + ".");
         }
     }
 
