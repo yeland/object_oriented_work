@@ -1,18 +1,18 @@
 package model;
 
 public class Student extends Person {
-    private Klass klass;
+    private Class klass;
 
-    public Student(int id, String name, int age, Klass klass) {
+    public Student(int id, String name, int age, Class klass) {
         super(id, name, age);
         this.klass = klass;
     }
 
-    public Klass getKlass() {
+    public Class getKlass() {
         return this.klass;
     }
 
-    public void setKlass(Klass klass) {
+    public void setKlass(Class klass) {
         this.klass = klass;
     }
 

@@ -1,18 +1,18 @@
 package model;
 
 public class Teacher extends Person {
-    private Klass[] classes;
+    private Class[] classes;
 
-    public Teacher(int id, String name, int age, Klass[] classes) {
+    public Teacher(int id, String name, int age, Class[] classes) {
         super(id, name, age);
         this.classes = classes;
     }
 
-    public Klass[] getClasses() {
+    public Class[] getClasses() {
         return this.classes;
     }
 
-    public void setClasses(Klass[] classes) {
+    public void setClasses(Class[] classes) {
         this.classes = classes;
     }
 
@@ -39,7 +39,7 @@ public class Teacher extends Person {
     }
 
     public boolean isTeaching(Student student) {
-        for (Klass klass: classes) {
+        for (Class klass: classes) {
             if(isIn(student,klass)){
                 return true;
             }
@@ -47,7 +47,7 @@ public class Teacher extends Person {
         return false;
     }
 
-    public boolean isIn(Student student, Klass klass) {
+    public boolean isIn(Student student, Class klass) {
         if(student.getKlass().getNumber() == klass.getNumber()) {
             return true;
         }

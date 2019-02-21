@@ -1,11 +1,11 @@
 package model;
 
-public class Klass {
+public class Class {
     private int number;
     private Student leader;
     private Teacher teacher;
 
-    public Klass(int number) {
+    public Class(int number) {
         this.number = number;
     }
 
