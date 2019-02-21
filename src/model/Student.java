@@ -8,6 +8,14 @@ public class Student extends Person{
         this.klass = klass;
     }
 
+    public Klass getKlass() {
+        return this.klass;
+    }
+
+    public void setKlass(Klass klass) {
+        this.klass = klass;
+    }
+
     @Override
     public String introduce() {
         if(this.klass.getLeader().getId() == this.id) {

@@ -23,6 +23,14 @@ public class Klass {
     }
 
     public void assignLeader(Student leader) {
-        this.leader = leader;
+        if(leader.getKlass().number!= this.number) {
+            System.out.println("It is not one of us.");
+        } else {
+            this.leader = leader;
+        }
+    }
+
+    public void appendMember(Student student) {
+        student.setKlass(this);
     }
 }
