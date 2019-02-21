@@ -10,7 +10,7 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-        return super.introduce()+"I am at class"+klass+".";
+        return super.introduce()+"I am a student.I am at class"+this.klass+".";
     }
 }
 
