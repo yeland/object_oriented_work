@@ -1,7 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-
 public class Teacher extends Person {
     private Klass[] classes;
 
@@ -32,5 +30,21 @@ public class Teacher extends Person {
             classesNumber[i] = number.toString();
         }
         return String.join(",",classesNumber);
+    }
+
+    public boolean isTeaching(Student student) {
+        for (Klass klass: classes) {
+            if(isIn(student,klass)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isIn(Student student, Klass klass) {
+        if(student.getKlass().getNumber() == klass.getNumber()) {
+            return true;
+        }
+        return false;
     }
 }
