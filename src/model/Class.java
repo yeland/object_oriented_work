@@ -28,7 +28,9 @@ public class Class {
             System.out.println("It is not one of us.");
         } else {
             this.leader = leader;
-            System.out.println("I am " + this.teacher.name + ".I know " + leader.name + " has become the Leader of Class " + this.number + ".");
+            if (this.teacher != null) {
+                System.out.println("I am " + this.teacher.name + ".I know " + leader.name + " has become the Leader of Class " + this.number + ".");
+            }
         }
     }
 
