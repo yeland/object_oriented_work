@@ -16,6 +16,12 @@ public class Teacher extends Person {
         this.classes = classes;
     }
 
+    public void setTeacherForClasses() {
+        for (int i = 0;i<this.classes.length;i++) {
+            this.classes[i].setTeacher(this);
+        }
+    }
+
     public String introduce() {
         if (classes.length == 0) {
             return super.introduce()+"I am a Teacher.I teach No Class.";
@@ -47,4 +53,6 @@ public class Teacher extends Person {
         }
         return false;
     }
+
+
 }
